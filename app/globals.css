@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A1411;
+  --foreground: #F2F1ED;
+  --primary: #DCCBB3;
+  --accent-green: #1B2D27;
+  --background-dark: #050a09;
+  --card: #1B2D27;
+  --border: rgba(220, 203, 179, 0.15);
+  --muted: rgba(242, 241, 237, 0.6);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-accent-green: var(--accent-green);
+  --color-background-dark: var(--background-dark);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui;
+  --font-display: var(--font-nanum), serif;
+  --duration-slideshow: 1000ms;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom GSAP utilities */
+.gsap-reveal {
+  opacity: 0;
+}
+
+.premium-blur {
+  backdrop-filter: blur(12px);
+  background: rgba(10, 20, 17, 0.85);
+}
+
+.dark-section {
+  background-color: var(--background-dark);
+  color: var(--foreground);
+}
+
+.alt-section {
+  background-color: var(--accent-green);
+  color: var(--foreground);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Section specific styling */
+section {
+  position: relative;
+}
+
+/* Lenis smooth scroll recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.bg-beige {
+  background-color: var(--primary);
+  color: var(--background);
 }
