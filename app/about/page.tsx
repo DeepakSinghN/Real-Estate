@@ -556,7 +556,7 @@ export default function AboutPage() {
                     <p className="text-white/60 text-lg md:text-xl font-light mb-16 max-w-2xl mx-auto">
                         Join our network of sophisticated investors and gain access to exclusive multi-family opportunities.
                     </p>
-                    <Link href="/#contact" className="inline-block px-12 py-6 bg-primary text-background text-[11px] font-bold uppercase tracking-[0.3em] rounded-full hover:bg-white transition-all duration-500 shadow-2xl">
+                    <Link href="/contact" className="inline-block px-12 py-6 bg-primary text-background text-[11px] font-bold uppercase tracking-[0.3em] rounded-full hover:bg-white transition-all duration-500 shadow-2xl">
                         Contact Our Team
                     </Link>
                 </div>

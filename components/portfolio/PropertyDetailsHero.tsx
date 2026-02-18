@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { Mail } from 'lucide-react';
 
 interface PropertyDetailsHeroProps {
     image: string;
@@ -83,14 +85,29 @@ const PropertyDetailsHero: React.FC<PropertyDetailsHeroProps> = ({
             </div>
 
             {/* Floating CONTACT US - Mobile/Global Side Badge Placeholder */}
-            <button className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 bg-[#2D3E4E] text-white px-8 py-4 rotate-90 translate-x-[40%] text-[10px] font-bold uppercase tracking-[0.3em] z-50 hover:bg-[#1A2631] transition-colors rounded-t-lg">
-                Contact Us
-            </button>
+            <Link
+                href="/contact"
+                className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 z-50 group items-center"
+            >
+                <div className="bg-primary hover:bg-white text-background px-3 py-6 rounded-l-xl transition-all duration-500 shadow-2xl flex flex-col items-center gap-4 border border-white/10 backdrop-blur-sm transform group-hover:-translate-x-2">
+                    <Mail size={16} className="rotate-0 group-hover:scale-110 transition-transform" />
+                    <span
+                        className="uppercase font-bold text-[10px] tracking-[0.2em] whitespace-nowrap"
+                        style={{ writingMode: "vertical-rl" }}
+                    >
+                        Contact Us
+                    </span>
+                </div>
+            </Link>
 
             {/* Mobile Contact Button - Floating Bottom Right */}
-            <button className="md:hidden fixed bottom-24 right-6 bg-[#2D3E4E] text-white px-6 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] z-50 shadow-2xl flex items-center gap-2">
+            <Link
+                href="/contact"
+                className="md:hidden fixed bottom-24 right-6 bg-primary text-background px-6 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] z-50 shadow-2xl flex items-center gap-2 border border-white/20 active:scale-95 transition-all"
+            >
+                <Mail size={14} />
                 Contact Us
-            </button>
+            </Link>
         </section>
     );
 };

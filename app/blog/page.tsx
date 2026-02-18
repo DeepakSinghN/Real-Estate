@@ -116,7 +116,7 @@ export default function BlogPage() {
 
             {/* Floating Contact Button */}
             <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden md:block">
-                <Link href="#contact" className="bg-accent-green text-primary border border-primary/20 hover:bg-primary hover:text-background px-8 py-5 rounded-l-full font-bold text-xs uppercase tracking-widest shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all flex items-center gap-4 group">
+                <Link href="/contact" className="bg-accent-green text-primary border border-primary/20 hover:bg-primary hover:text-background px-8 py-5 rounded-l-full font-bold text-xs uppercase tracking-widest shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all flex items-center gap-4 group">
                     Contact Us
                 </Link>
             </div>
